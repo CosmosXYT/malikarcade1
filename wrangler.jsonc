@@ -1,0 +1,7 @@
+{
+  // Optional: only used if deploying this directory to Cloudflare Workers.
+  // GitHub Pages does not need this file.
+  "name": "malik-arcade",
+  "compatibility_date": "2026-10-01",
+  "assets": { "directory": "./" }
+}

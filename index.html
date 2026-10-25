@@ -1,0 +1,143 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#101629">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Malik Arcade">
+  <meta name="description" content="Five original mini games starring Malik. Made for Malik, starring Malik, and entirely Malik-coded.">
+  <link rel="icon" href="assets/icon-192.png" type="image/png">
+  <link rel="apple-touch-icon" href="assets/icon-192.png">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <title>Malik Arcade 💙 | The Malik Experience</title>
+</head>
+<body>
+  <div class="ambient ambient-a" aria-hidden="true"></div><div class="ambient ambient-b" aria-hidden="true"></div>
+  <div id="app">
+    <header class="topbar">
+      <a class="brand" href="#home" id="brand-link" aria-label="Malik Arcade home">
+        <span class="brand-avatar"><img src="assets/face.png" alt="Malik" draggable="false"></span>
+        <span class="brand-name">MALIK<span> ARCADE</span><small>THE MALIK EXPERIENCE</small></span>
+      </a>
+      <div class="top-actions">
+        <span class="wallet" title="Malik hearts earned across games"><span aria-hidden="true">♥</span> <strong id="wallet-count">0</strong></span>
+        <button id="audio-toggle" class="icon-btn" type="button" aria-label="Mute sounds" title="Toggle sounds">♫</button>
+        <button id="settings-toggle" class="icon-btn" type="button" aria-label="Settings" title="Settings">⚙</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="home-screen" class="home-screen" aria-labelledby="hero-title">
+        <div class="hero">
+          <div class="hero-content">
+            <span class="eyebrow"><span class="live-dot"></span> THE ONE & ONLY MALIK ARCADE · EST. 2026</span>
+            <h1 id="hero-title">Welcome to<br><em>Malik's world.</em></h1>
+            <p>There is only one main character here — Malik. Five chaotic little games, starring his actual face. Built just for him. 💙</p>
+            <div class="hero-actions">
+              <button class="primary-btn" type="button" data-open="flappy">Make Malik fly <span aria-hidden="true">↗</span></button>
+              <a href="#games" class="ghost-btn">Explore games ↓</a>
+            </div>
+            <div class="hero-stats">
+              <span><strong>05</strong><small>MALIK GAMES</small></span>
+              <span><strong id="total-plays">0</strong><small>TOTAL RUNS</small></span>
+              <span><strong id="best-flappy-hero">0</strong><small>BEST FLIGHT</small></span>
+            </div>
+          </div>
+          <div class="hero-art" aria-hidden="true">
+            <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+            <span class="float-chip chip-a">100% MALIK ♥</span><span class="float-chip chip-b">MAIN CHARACTER ✦</span>
+            <div class="halo"></div>
+            <img class="hero-face" src="assets/face.png" alt="Malik" draggable="false">
+            <span class="hero-spark s1">✦</span><span class="hero-spark s2">♥</span><span class="hero-spark s3">✧</span>
+          </div>
+        </div>
+        <div id="games" class="section-heading"><div><span class="eyebrow">THE MALIK COLLECTION</span><h2>Made for Malik <span class="count-pill">05</span></h2></div><p>Different games. The same Malik everywhere.</p></div>
+        <div class="games-grid">
+          <button type="button" data-open="flappy" class="game-tile tile-flappy featured-tile">
+            <span class="tile-decor">✧</span><span class="game-number">01 / THE ORIGINAL</span>
+            <div class="tile-art"><span class="fake-pipe pipe-top"></span><img src="assets/face.png" alt="Malik" draggable="false"><span class="fake-pipe pipe-bottom"></span></div>
+            <span class="tile-bottom"><span><strong>Flappy Malik</strong><small>Keep Malik airborne · Endless</small></span><span class="tile-arrow">↗</span></span>
+          </button>
+          <button type="button" data-open="dash" class="game-tile tile-dash">
+            <span class="game-number">02 / RUN & DODGE</span>
+            <div class="tile-art"><span class="dash-lane"></span><img src="assets/face.png" alt="Malik" draggable="false"><span class="tile-emoji">⚡</span></div>
+            <span class="tile-bottom"><span><strong>Malik Dash</strong><small>Malik versus traffic · Endless</small></span><span class="tile-arrow">↗</span></span>
+          </button>
+          <button type="button" data-open="catch" class="game-tile tile-catch">
+            <span class="game-number">03 / COLLECT 'EM ALL</span>
+            <div class="tile-art"><span class="heart-cloud">♥ ✦ ♥</span><img src="assets/face.png" alt="Malik" draggable="false"></div>
+            <span class="tile-bottom"><span><strong>Malik Love Rush</strong><small>Catch hearts for Malik · 45 sec</small></span><span class="tile-arrow">↗</span></span>
+          </button>
+          <button type="button" data-open="match" class="game-tile tile-match">
+            <span class="game-number">04 / BRAIN POWER</span>
+            <div class="tile-art tile-memory-art"><span class="tiny-card">?</span><span class="tiny-card flipped"><img src="assets/face.png" alt="Malik"></span><span class="tiny-card">?</span></div>
+            <span class="tile-bottom"><span><strong>Malik Match</strong><small>Remember Malik · Puzzle</small></span><span class="tile-arrow">↗</span></span>
+          </button>
+          <button type="button" data-open="whack" class="game-tile tile-whack">
+            <span class="game-number">05 / QUICK HANDS</span>
+            <div class="tile-art tile-whack-art"><span class="hole"></span><img src="assets/face.png" alt="Malik"><span class="tile-emoji">💥</span></div>
+            <span class="tile-bottom"><span><strong>Pop the Malik</strong><small>Tap Malik, avoid traps · 30 sec</small></span><span class="tile-arrow">↗</span></span>
+          </button>
+        </div>
+        <section class="malik-records" aria-label="Malik's trophy shelf">
+          <div class="records-heading"><span class="eyebrow">MALIK'S TROPHY SHELF</span><h2>Legend status <span aria-hidden="true">🏆</span></h2><p>Win games to unlock Malik's achievements. Every score stays saved on this device.</p></div>
+          <div class="trophy-grid" id="trophy-grid" aria-live="polite"></div>
+        </section>
+        <footer class="footer"><span>Handmade for Malik with ♥, chaos, and questionable judgment.</span><span>100% Malik. No accounts. No ads.</span></footer>
+      </section>
+
+      <section id="play-screen" class="play-screen hidden" aria-label="Game screen">
+        <div class="play-top">
+          <button type="button" id="go-home" class="back-btn">← <span>Malik Arcade</span></button>
+          <div class="play-heading"><span class="eyebrow" id="play-category">MALIK'S GAME</span><h2 id="play-title">Flappy Malik</h2></div>
+          <button type="button" id="pause-btn" class="pill-btn">Ⅱ Pause</button>
+        </div>
+        <div class="play-layout">
+          <div class="play-main">
+            <div class="stage-shell" id="stage-shell">
+              <div class="stage-hud"><div class="hud-box"><small id="score-label">SCORE</small><strong id="score-value">0</strong></div><div class="hud-box align-right"><small id="best-label">BEST</small><strong id="best-value">0</strong></div></div>
+              <canvas id="game-canvas" width="800" height="1240" aria-label="Game area"></canvas>
+              <div id="dom-stage" class="dom-stage hidden"></div>
+              <div id="game-overlay" class="game-overlay">
+                <div class="overlay-card">
+                  <div id="overlay-face" class="overlay-face"><img src="assets/face.png" alt="Malik"></div>
+                  <div id="overlay-kicker" class="overlay-kicker">READY WHEN YOU ARE</div>
+                  <h3 id="overlay-title">Flappy Malik</h3>
+                  <p id="overlay-message">Tap to fly, don't hit the pipes.</p>
+                  <div id="overlay-results" class="overlay-results hidden"></div>
+                  <button type="button" id="overlay-action" class="primary-btn overlay-button">Let Malik cook <span>↗</span></button>
+                  <button type="button" id="overlay-back" class="text-btn">Back to Malik Arcade</button>
+                </div>
+              </div>
+              <div id="pause-badge" class="pause-badge hidden">PAUSED</div>
+            </div>
+            <div class="touch-hint" id="touch-hint">TAP / SPACE TO FLAP <span>✦</span></div>
+          </div>
+          <aside class="game-info">
+            <div class="info-card"><span class="eyebrow">HOW TO PLAY</span><h3 id="info-title">Don't touch the pipes.</h3><p id="info-text">Tap the screen or hit Space to make him fly. Thread the gaps and collect hearts.</p><div id="game-tips" class="tips"><span>✦ Tap anywhere</span><span>✦ Collect hearts</span><span>✦ Beat your best</span></div></div>
+            <div class="info-card best-card"><span class="eyebrow">PERSONAL BEST</span><div class="big-best" id="side-best">0</div><p>Saved on this device automatically.</p></div>
+            <div class="info-card another-card"><span class="eyebrow">TRY SOMETHING ELSE</span><div id="suggested-games" class="suggested-games"></div></div>
+          </aside>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <dialog id="settings-dialog" class="settings-dialog">
+    <div class="dialog-heading"><div><span class="eyebrow">MALIK, YOUR RULES</span><h2>Customize Malik Arcade</h2></div><button class="icon-btn" id="close-settings" aria-label="Close settings">×</button></div>
+    <p>Pick your favorite version of Malik. Your scores, achievements, and hearts save on your own device.</p>
+    <h3>Which Malik?</h3>
+    <div class="skins">
+      <button type="button" class="skin-choice" data-skin="photo"><img src="assets/face.png" alt="Malik photo"><strong>Real Malik</strong><small>THE ORIGINAL</small></button>
+      <button type="button" class="skin-choice" data-skin="winged"><img src="assets/face-winged.png" alt="Malik cartoon with wings"><strong>Angel Malik</strong><small>WINGED EDITION</small></button>
+    </div>
+    <button class="setting-row" id="motion-toggle" type="button"><span>Reduce motion<small>Fewer decorative animations</small></span><strong id="motion-state">OFF</strong></button>
+    <p class="dialog-note">Both Maliks are already yours. No purchases, accounts, ads, or tracking.</p>
+  </dialog>
+  <div id="toast-area" class="toast-area" aria-live="polite"></div>
+  <script src="app.js" defer></script>
+</body>
+</html>
